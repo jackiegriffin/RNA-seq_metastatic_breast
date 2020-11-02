@@ -16,11 +16,6 @@ Analyze non biological replicate data; primary and matched metastatic tumors.
   - Three biological replicates are available for estrogen deprived ZR75-1 primary and matched brain metastasis treatment group – use coefficient of variation from this analysis and apply for matched primary and metastatic tumors for other treatment groups where only 1 biological replicate is available (I.e., Estrogen deprived, MCF-7 primary and matched bone metastasis).
 
 ---------------------------------------------------------------------------------------------------------------------------
-
-STAR
-call HUMAN GENOME (hg38.fa): -- sjdbGTFfile human.gtf
-call MOUSE GENOME: --sjdbGTFfile /mnt/c/Users/Jgriffin/Desktop/gencode.vM24.annotation.gtf
-------------------------------------------------------------------------------------------------------------------------------------------
 XenoFilteR
 - Sequence reads that only map to a single reference genome are classified to that specific organism.
 - For reads that map to both the human and mouse reference genome the edit distance (the number of base pairs different between the sequence read and the reference genome) is calculated by summing soft clips, insertions (CIGAR string) and the number of mismatches (‘NM’-tag) (F and R averaged for paired-end). Reads having a lower edit distance for the reference genome of a species are classified as originating from that species
