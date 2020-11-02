@@ -25,7 +25,9 @@ XenoFilteR
 - Sequence reads that only map to a single reference genome are classified to that specific organism.
 - For reads that map to both the human and mouse reference genome the edit distance (the number of base pairs different between the sequence read and the reference genome) is calculated by summing soft clips, insertions (CIGAR string) and the number of mismatches (‘NM’-tag) (F and R averaged for paired-end). Reads having a lower edit distance for the reference genome of a species are classified as originating from that species
 
-Limitation: reads with an equal edit distance to mouse as well as human are not assigned. Potential loss of conserved genes
+Limitation: Potential loss of conserved genes with reads of an equal edit distance to mouse as well as human are not assigned. Poteltioal loss of conserved genes.
+
+
 ---------------------------------------------------------------------------------------------------------------------------
 FEATURECOUNTS 
 
