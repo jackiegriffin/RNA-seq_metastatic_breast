@@ -12,14 +12,14 @@ o	featureCounts built-in SAF hg38 annotation file outputs entrez ids as meta fea
 ------------------------------------------------------------------------------------------------------------------------------------------
 EDGER
 -	Analyze no replicate data; primary and matched metastatic tumors. 
-o	Input coefficient of variation extrapolated from similar data to get dispersion estimates and subsequent FC values to estimate DE expression between primary tumor and matched metastasis with single replicate data. 
-
-o	Three biological replicates are available for estrogen deprived ZR75-1 primary and matched brain metastasis treatment group – use coefficient of variation from this analysis and apply for matched primary and metastatic tumors for other treatment groups where only 1 biological replicate is available (I.e., Estrogen deprived, MCF-7 primary and matched bone metastasis).
+  - coefficient of variation extrapolated from similar data to get dispersion estimates and subsequent FC values to estimate DE expression between primary tumor and matched metastasis with single replicate data. 
+  - Three biological replicates are available for estrogen deprived ZR75-1 primary and matched brain metastasis treatment group – use coefficient of variation from this analysis and apply for matched primary and metastatic tumors for other treatment groups where only 1 biological replicate is available (I.e., Estrogen deprived, MCF-7 primary and matched bone metastasis).
 
 ------------------------------------------------------------------------------------------------------------------------------------------
+
 STAR
-call HUMAN GENOME (hg38.fa): $$-- sjdbGTFfile human.gtf$$
-call MOUSE GENOME: $$--sjdbGTFfile /mnt/c/Users/Jgriffin/Desktop/gencode.vM24.annotation.gtf$$
+call HUMAN GENOME (hg38.fa): -- sjdbGTFfile human.gtf
+call MOUSE GENOME: --sjdbGTFfile /mnt/c/Users/Jgriffin/Desktop/gencode.vM24.annotation.gtf
 ------------------------------------------------------------------------------------------------------------------------------------------
 XenoFilteR
 5.	Sequence reads that only map to a single reference genome are classified to that specific organism.
