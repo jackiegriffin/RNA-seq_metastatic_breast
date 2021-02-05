@@ -18,6 +18,13 @@ gene <- names(geneList)[abs(geneList) > 2] # set genelist to include those with 
 
 
 
+
+
+
+
+
+
+
 ## Enrichment plots ----
 
 # DisGeNET(Janet et al. 2015) is an integrative and comprehensive resources 
