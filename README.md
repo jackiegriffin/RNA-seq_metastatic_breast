@@ -1,5 +1,5 @@
-# RNA-seq data from patient-derived, matched primary (ER+ breast) and metastatic solid tumors. 
-### Objective: Using edgeR, perform differential expression analysis and identify transcripts uniquely upregulated in bone, brain, and adrenal metastases.
+## RNA-seq data from matched primary (ER+ breast) and metastatic patient-derived, solid tumors. 
+#### Objective: Using edgeR, perform differential expression analysis and identify transcripts uniquely upregulated in bone, brain, and adrenal metastases.
 
 
 #
