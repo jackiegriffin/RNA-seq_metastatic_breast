@@ -1,12 +1,12 @@
-# RNA-seq data from matched primary (ER+ breast) and metastatic, patient-derived, solid tumors. 
-### Objective: Using edgeR, perform differential expression analysis and identify uniquely upregulated transcripts driving metastases to the bone, brain, and adrenals.  
+# RNA-seq data from patient-derived, matched primary (ER+ breast) and metastatic solid tumors. 
+### Objective: Using edgeR, perform differential expression analysis and identify transcripts uniquely upregulated in bone, brain, and adrenal metastases.
 
 
+#
 >
-> FASTQC -> 1. STAR -> 2. XenofilteR -> 3. featurecounts -> **4. edgeR** 
->
+> FASTQC -> 1. STAR -> 2. XenofilteR -> 3. featurecounts -> **4. edgeR -> 5. Functional enrichment -> 6. cBioportal/GEO data integration** -> 7. Druggable target identification
 
-
+#
 1. Paired-end, short (76 bp) reads were mapped to:
    + Human (GRCh38 + gencode v33 annotation)
    + Mouse (GRCm38.p6 release 24 + gencode vM24 annotation) 
@@ -19,10 +19,5 @@
    + Transcriptional misregulation in cancer = hsa05202
    + MicroRNAs in cancer = hsa05206
    + MSigDB oncogenic C6
-   
-   
-   
-   
-   
-   
-
+6. Cox proportional hazard regression with mRNA expression of DEGs as predictors to stratify patient outcome.
+7. Target identification was prioritized to repurposing FDA approved drugs. Dgidb.org was used to search drug-gene interactions + FDA status and PubChem and clinicaltrials.gov for specificity, toxicity, clinical history.
