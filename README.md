@@ -1,6 +1,5 @@
 ## RNA-seq data from matched primary (ER+ breast) and metastatic patient-derived, solid tumors. 
-#### Objective: Using edgeR, perform differential expression analysis and identify transcripts uniquely upregulated in bone, brain, and adrenal metastases.
-
+#### Objective: Perform differential expression analysis to identify transcripts uniquely upregulated in bone, brain, and adrenal metastases. Integrate public datasets to stratify patient outcome. Select clinically relevant, druggable targets for pre-clinical investigation in prolonging/preventing metastatic recurrence in ER+ breast cancer.
 
 #
 >
