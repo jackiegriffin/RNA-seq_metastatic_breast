@@ -1,0 +1,23 @@
+,,,,,ERa IHC (JM),,,,
+E2_status,cell_line,tumor_type,mouse_id,histology,Proportion,Intensity,Allred score,fastq_ID,upset_ID
+E2,MCF-7,Primary,3B_67928_3b,TWM-19-35,5,2,7,4P,
+E2,MCF-7,adrenal,3B_67928_3b,TWM-19-111,4,1,5,22,Adrenal.3
+E2,MCF-7,proximial tibia,3B_67928_3b,TWM-19-112,3,1,4,2.II,Bone.3
+E2,MCF-7,Primary,3B_67928_2,TWM-19-02,5,2,7,5P,
+E2,MCF-7,adrenal,3B_67928_2,TWM-19-104,4,1,5,12.I,Adrenal.1
+E2,MCF-7,brain,3B_67928_2,TWM-19-103,4,2,6,E,Brain.4
+E2,MCF-7,proximal tibia,3B_67928_2,TWM-19-107,4,1,5,5.I,Bone.2
+E2,MCF-7,Primary,3B_67928_1,TWM-19-01,5,1,6,1P,
+E2,MCF-7,adrenal,3B_67928_1,TWM-19-98,5,2,7,2,Adrenal.2
+E2,MCF-7,kidney,3B_67928_1,TWM-19-98,5,2,7,12,Kidney.1
+E2,MCF-7,Tibia,3B_67928_1,TWM-19-100,4,1,5,C,Bone.1
+E2,MCF-7,femur,3B_67928_1,TWM-19-99,5,2,7,15.I,Bone.4
+ED,MCF-7,Primary,3B_67927_6,TWM-19-83,5,3,8,2P,
+ED,MCF-7,proximal humerus,3B_67927_6,TWM-19-102,5,2,7,16,Bone.5
+ED,ZR-75-1,Primary,3B_74905_1,TWM-19-361,0,0,0,3P,
+ED,ZR-75-1,brain,3B_74905_1,TWM-19-362,0,0,0,11.II,Brain.1
+ED,ZR-75-1,Primary,3B_74905_5,TWM-19-364,0,0,0,25,
+ED,ZR-75-1,femur-tibia/fibula,3B_74905_5,TWM-19-366,0,0,0,10,Bone.6
+ED,ZR-75-1,brain,3B_74905_5,TWM-19-371,0,0,0,6,Brain.3
+ED,ZR-75-1,Primary,3B_74905_3,TWM-19-340,2,1,3,26,
+ED,ZR-75-1,brain,3B_74905_3,TWM-19-341,0,0,0,8.I,Brain.2

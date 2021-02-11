@@ -20,3 +20,7 @@
    + MSigDB oncogenic C6
 6. Cox proportional hazard regression with mRNA expression of DEGs as predictors to stratify patient outcome.
 7. Target identification was prioritized to repurposing FDA approved drugs. Dgidb.org was used to search drug-gene interactions + FDA status and PubChem and clinicaltrials.gov for specificity, toxicity, clinical history.
+
+
+
+** BCV taken from similar data; brain mets and zr751 primaries ()
