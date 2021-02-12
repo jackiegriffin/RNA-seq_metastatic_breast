@@ -1,6 +1,5 @@
 # libraries ----
   library(plyr)
-  # library(limma)
   library(UpSetR)
   library(reshape2)
   library(dplyr)
@@ -10,6 +9,7 @@
   library(pheatmap)
   library(ggplot2)
   library(edgeR)
+  library(limma)
   library(ggupset)
   library(DOSE)
   library(magrittr)
@@ -19,6 +19,7 @@
   library(GenomeInfoDb)
   library(xtable)
 
+  # BiocManager::install("edgeR")
   # BiocManager::install("org.Hs.eg.db")
   # BiocManager::install("GenomeInfoDb")
 
@@ -44,16 +45,16 @@
   head(metadata)
   
 # Asign groups ----
-  counts <- all_featureCounts[c(1,2)] 
+  counts <- all_featureCounts[c(20,21)] 
   names(counts)
-  Groups <- c(1,2) # 1=primary 2=mets
+  Groups <- c(1,2) # 1 = primary 2 = met
 
-# DGEList object ----
+# DGEList ----
   DGE <- DGEList(counts = counts, group = Groups, genes = row.names(counts))
   dim(DGE)
 
 # Filter ----
-  DGE <- DGE[rowSums(cpm(DGE) > 1) >= 2, keep.lib.sizes = FALSE]
+  DGE <- DGE[rowSums(cpm(DGE) > .1) >= 2, keep.lib.sizes = FALSE] 
   dim(DGE)
 
 # Normalize (TMM)----
@@ -65,22 +66,19 @@
 # glmFit ---- (BCV taken from ED/brain subset)
   fit <- glmFit(DGE, dispersion = 0.3) 
   treat <- glmTreat(fit, coef = 2, lfc = 1) 
-  treat_1<- summary(decideTests(treat, p = 0.05, adjust = "none"))
+  summary(decideTests(treat, p = 0.05, adjust = "none"))
   
+#  
   results <- as.data.frame(topTags(treat, n = dim(DGE)[1]))
   sig_results <- results[results$PValue < 0.05,  ]
   
-  write.csv(results_25_10, file = "1P primary v 15_I andc E2/RESULTS_E2_1P_15.1.csv", row.names = FALSE)
-  write.csv(sig_results, file = "EdgeR_output_files/SIG_RESULTS_ED_ZR751_26v8_1.csv", row.names = FALSE)
+  write.csv(sig_results, file = "EdgeR_DEG_analysis/EdgeR_output_files/2.11.2021/26ed_v_8_I.brain.csv", row.names = FALSE)
   
 
-et <- exactTest(DGE, dispersion = 0.3)
-summary(decideTests(et, p = 0.05, adjust = "none"))
 
 
-
-
-
+  # STOP ---------
+  
 # Volcano Plot ----
 plot(-log10(results$PValue) ~ results$logFC, 
      xlab = "log2 FC", ylab = "-log10 p-value", 
