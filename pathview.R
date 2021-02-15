@@ -9,13 +9,13 @@ library("pathview")
 #      
 
 ##    COMPLETE --------------------------------------------------------
-  complete <- read.csv("Pathway_Enrichment_Analysis/Data_files_INPUT/gene.list_sig_complete_DEGs.csv")
+  complete <- read.csv("2.12.2021/complete_DEGs.csv")
   geneListcomplete <- complete[,2]
   names(geneListcomplete) <- as.character(complete[,1])
   geneListcomplete <- sort(geneListcomplete, decreasing = TRUE)
   gene <- names(geneListcomplete)[abs(geneListcomplete) > 2] 
-  hsa03100 <- pathview(gene.data  = geneListcomplete,
-                       pathway.id = "hsa03100",
+  hsa05224 <- pathview(gene.data  = geneListcomplete,
+                       pathway.id = "hsa05224",
                        species    = "hsa",
                        limit      = list(gene=max(abs(geneListcomplete)), cpd=1),
                        out.suffix = "complete")
