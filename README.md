@@ -20,11 +20,10 @@
    + MSigDB oncogenic C6
 6. Cox proportional hazard regression with mRNA expression of DEGs as predictors to stratify patient outcome.
 7. Target identification was prioritized to repurposing FDA approved drugs. Dgidb.org was used to search drug-gene interactions + FDA status and PubChem and clinicaltrials.gov for specificity, toxicity, clinical history.
-
-
 #
-## Intersecting genes **UP regulated** in breast cancer metastases vs. their primary tumor counterpart
+
+### Intersecting genes **UP regulated** in breast cancer metastases vs. their primary tumor counterpart
 ![UP](https://user-images.githubusercontent.com/60406281/107899829-6b46eb80-6f0d-11eb-8e51-bfcbf802ab83.jpeg)
 ---
-## Intersecting genes **DOWN regulated** in breast cancer metastases vs. their primary tumor counterpart
+### Intersecting genes **DOWN regulated** in breast cancer metastases vs. their primary tumor counterpart
 ![down](https://user-images.githubusercontent.com/60406281/107899828-6aae5500-6f0d-11eb-818f-7338a3900f42.jpeg)
