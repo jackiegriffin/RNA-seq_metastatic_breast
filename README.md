@@ -24,3 +24,6 @@
 
 
 ** BCV taken from similar data; brain mets and zr751 primaries ()
+
+![down](https://user-images.githubusercontent.com/60406281/107899828-6aae5500-6f0d-11eb-818f-7338a3900f42.jpeg)
+![UP](https://user-images.githubusercontent.com/60406281/107899829-6b46eb80-6f0d-11eb-8e51-bfcbf802ab83.jpeg)
