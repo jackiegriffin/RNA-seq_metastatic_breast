@@ -18,7 +18,7 @@ library(ggplot2)
 
 # GSEA, KEGG, disgenet ---- 
     gsea <- gseNCG(geneList, nPerm=10000)
-    gsea_plot <- dotplot(gsea, showCategory=20) + ggtitle("GSEAxx")  
+    gsea_plot <- dotplot(gsea, showCategory=20) + ggtitle("Functional enrichment by cancer type (GSEA)")  
     plot(gsea_plot)
     enrich_KEGG <- enrichKEGG(gene = gene, organism='hsa',pvalueCutoff = 0.05)
     kegg_plot <- dotplot(enrich_KEGG, showCategory=8) + ggtitle("KEGG")

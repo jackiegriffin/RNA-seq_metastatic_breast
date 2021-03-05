@@ -14,9 +14,9 @@
   library(biomaRt)
 
 # load complete DEGs & metadata ----
-  complete_DEGs <- read.csv(file = "2.12.2021/upset_plot/complete_DEGs.csv", 
+  complete_DEGs <- read.csv(file = "3. edgeR_upset/upset_plot_ud/Data_input/complete_DEGs.csv", 
                           stringsAsFactors = FALSE, header = TRUE)
-  metadata <- read.csv(file = "2.12.2021/upset_plot/metadata.csv", stringsAsFactors = FALSE, header = TRUE)
+  metadata <- read.csv(file = "3. edgeR_upset/upset_plot_ud/Data_input/metadata.csv", stringsAsFactors = FALSE, header = TRUE)
 
   head(complete_DEGs)
 
@@ -59,40 +59,40 @@
                        list(query = intersects, params = list("Brain.3", "Brain.2"), #
                             color = "forestgreen", active = T)),
         order.by = "degree",
-        mainbar.y.label = "Intersecting Gene Count", 
-        sets.x.label = "Upregulated DEG's",
+        mainbar.y.label = "Intersecting Gene Count",
+        sets.x.label = "Unique Gene Count",
         sets = c("Bone.6", "Bone.5",
                  #"Kidney.1",
                  "Brain.4",
                  "Bone.4", "Bone.3", "Bone.2", "Bone.1",
                  "Brain.3","Brain.2", "Brain.1",
                  "Adrenal.3","Adrenal.2","Adrenal.1"),
-        set_size.show = TRUE,
-        text.scale = c(1.5, 1, 1.25, 1.5, 1.5, 1.5),
+        # set_size.show = TRUE,
+        text.scale = c(1.8, 1.8, 1.8, 1.8, 1.8, 1.8),
         # c(1: intersection size title, 2: intersection size
         # 3: tick labels, 4: set size title, set size tick labels, set names, numbers above bars)
-        mb.ratio = c(0.5,0.5),
+        mb.ratio = c(0.55,0.45),
         point.size = 3,
         line.size = 1.1,
-        matrix.color = "slategray",
+        matrix.color = "black",
         sets.bar.color = c("darkorchid2", "darkorchid2",
                            #"black", 
                            "forestgreen",
                            "darkorchid2", "darkorchid2", "darkorchid2", "darkorchid2",
                            "forestgreen", "forestgreen", "forestgreen",
                            "orange", "orange", "orange"),
-        main.bar.color = "slategray",
-        shade.color = "slategray",
+        main.bar.color = "black",
+        shade.color = "black",
         shade.alpha = 0.1,
         matrix.dot.alpha = 0.3,
         color.pal = 1,
         keep.order = TRUE,
         set.metadata = list(data=metadata, plots=list(
-          list(type="text", column = "Cell_line", assign = 14),
-          list(type="heat", column = "Estrogen_status", assign = 14,
+          # list(type="text", column = "Cell_line", assign = 14),
+          list(type="heat", column = "Estrogen_status", assign = 10,
                colors = c(ED = "lightblue", E2 = "lavenderblush2")))
         )
-  )
+    )
 
   
 # subset downregulated DEG's ----
@@ -133,9 +133,9 @@
                    "Bone.4", "Bone.3", "Bone.2", "Bone.1",
                    "Brain.3","Brain.2", "Brain.1",
                    "Adrenal.3","Adrenal.2","Adrenal.1"),
-          set_size.show = TRUE,
-          text.scale = c(1.5, 1, 1.25, 1.5, 1.5, 1.5),
-          mb.ratio = c(0.5,0.5),
+          # set_size.show = TRUE,
+          text.scale = c(1.8, 1.8, 1.8, 1.8, 1.8, 1.8),
+          mb.ratio = c(0.55,0.45),
           point.size = 3,
           line.size = 1.1,
           matrix.color = "slategray",
@@ -144,17 +144,17 @@
                              "darkorchid2", "darkorchid2", "darkorchid2", "darkorchid2",
                              "forestgreen", "forestgreen", "forestgreen",
                              "orange", "orange", "orange"),
-          main.bar.color = "slategray",
-          shade.color = "slategray",
+          main.bar.color = "black",
+          shade.color = "black",
           shade.alpha = 0.1,
           matrix.dot.alpha = 0.3,
           color.pal = 1,
-          keep.order = TRUE,
-          set.metadata = list(data=metadata, plots=list(
-            list(type="text", column = "Cell_line", assign = 14),
-            list(type="heat", column = "Estrogen_status", assign = 14,
-                 colors = c(ED = "lightblue", E2 = "lavenderblush2")))
-          )
+          keep.order = TRUE
+          # set.metadata = list(data=metadata, plots=list(
+          #   # list(type="text", column = "Cell_line", assign = 14),
+          #   list(type="heat", column = "Estrogen_status", assign = 10,
+          #        colors = c(ED = "lightblue", E2 = "lavenderblush2")))
+          # )
     )
     
       
