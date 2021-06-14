@@ -24,7 +24,7 @@
     # devtools::install_github("tidyverse/dplyr")
 
 # adrenal data ----
-  d_adrenal <- read.csv("4. Pathway_enrichment/DEGs_organ_stratified/adrenal.2.11.2021.csv")
+  d_adrenal <- read.csv("4. Pathway_enrichment/DEGs_organ_stratified/Input_data/adrenal.2.11.2021.csv")
 
 
 # Format  ----

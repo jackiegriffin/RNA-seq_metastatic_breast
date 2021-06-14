@@ -14,9 +14,9 @@
   library(biomaRt)
 
 # load complete DEGs & metadata ----
-  complete_DEGs <- read.csv(file = "3. edgeR_upset/upset_plot_ud/Data_input/complete_DEGs.csv", 
+  complete_DEGs <- read.csv(file = "3. Differential expression analysis/Upset_plots/Data_input/complete_DEGs.csv", 
                           stringsAsFactors = FALSE, header = TRUE)
-  metadata <- read.csv(file = "3. edgeR_upset/upset_plot_ud/Data_input/metadata.csv", stringsAsFactors = FALSE, header = TRUE)
+  metadata <- read.csv(file = "3. Differential expression analysis/Upset_plots/Data_input/metadata.csv", stringsAsFactors = FALSE, header = TRUE)
 
   head(complete_DEGs)
 

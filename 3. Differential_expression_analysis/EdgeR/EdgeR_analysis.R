@@ -40,8 +40,8 @@
 ##############################################################################
 
 # Load data ----
-    featureCounts <- read.table(file = "3. edgeR_upset/EdgeR_ud/Data_input/feature_counts.txt", sep = "\t", stringsAsFactors = FALSE, header = TRUE, row.names = 1)
-    metadata <- read.csv(file = "3. edgeR_upset/EdgeR_ud/Data_input/metadata_complete.csv", stringsAsFactors = FALSE, header = FALSE)
+    featureCounts <- read.table(file = "3. Differential expression analysis/EdgeR/Data_input/feature_counts.txt", sep = "\t", stringsAsFactors = FALSE, header = TRUE, row.names = 1)
+    metadata <- read.csv(file = "3. Differential expression analysis/EdgeR/Data_input/metadata_complete.csv", stringsAsFactors = FALSE, header = FALSE)
     
     # format df
       colnames(featureCounts)
